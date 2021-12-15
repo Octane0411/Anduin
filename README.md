@@ -18,7 +18,7 @@
 
 ## 快速开始
 
-1. maven引入依赖(目前并未上传到maven仓库，但jar包应该在近期上传至博客)
+1. maven引入依赖(目前并未上传到maven仓库)
 
 ```xml
         <dependency>
