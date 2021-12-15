@@ -1,4 +1,4 @@
-package com.octane.anduin.string;
+package com.octane.anduin.utils;
 
 /**
  * handle basic map algorithms

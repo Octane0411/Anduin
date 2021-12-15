@@ -1,6 +1,5 @@
-package com.octane.anduin.string;
+package com.octane.anduin.utils;
 
-import java.util.List;
 import java.util.Map;
 
 /**

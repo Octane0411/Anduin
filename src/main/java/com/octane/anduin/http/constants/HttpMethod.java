@@ -24,7 +24,7 @@ package com.octane.anduin.http.constants;
  * TRACE方法沿着到目标资源的路径执行一个消息环回测试。
  *
  */
-public class HttpMethods {
+public class HttpMethod {
 
     public static final String GET = "GET";
 

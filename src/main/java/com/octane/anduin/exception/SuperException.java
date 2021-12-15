@@ -1,12 +1,11 @@
-package com.malfurion.malfurionserver.common.exception.base;
+package com.octane.anduin.exception;
 
-import com.malfurion.malfurionserver.common.utils.MessageUtils;
-import com.malfurion.malfurionserver.common.utils.StringUtils;
+import com.octane.anduin.utils.StringUtils;
 
 /**
  * 基础异常
  */
-public class BaseException extends RuntimeException
+public class SuperException extends RuntimeException
 {
     private static final long serialVersionUID = 1L;
 
@@ -30,7 +29,7 @@ public class BaseException extends RuntimeException
      */
     private String defaultMessage;
 
-    public BaseException(String module, String code, Object[] args, String defaultMessage)
+    public SuperException(String module, String code, Object[] args, String defaultMessage)
     {
         this.module = module;
         this.code = code;
@@ -38,22 +37,22 @@ public class BaseException extends RuntimeException
         this.defaultMessage = defaultMessage;
     }
 
-    public BaseException(String module, String code, Object[] args)
+    public SuperException(String module, String code, Object[] args)
     {
         this(module, code, args, null);
     }
 
-    public BaseException(String module, String defaultMessage)
+    public SuperException(String module, String defaultMessage)
     {
         this(module, null, null, defaultMessage);
     }
 
-    public BaseException(String code, Object[] args)
+    public SuperException(String code, Object[] args)
     {
         this(null, code, args, null);
     }
 
-    public BaseException(String defaultMessage)
+    public SuperException(String defaultMessage)
     {
         this(null, null, null, defaultMessage);
     }
@@ -64,7 +63,7 @@ public class BaseException extends RuntimeException
         String message = null;
         if (!StringUtils.isEmpty(code))
         {
-            message = MessageUtils.message(code, args);
+            message = defaultMessage;
         }
         if (message == null)
         {
